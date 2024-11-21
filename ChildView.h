@@ -19,13 +19,13 @@ public:
 public:
 	Maze maze;
 	Player player;
-	int cellSize = 30;
+	
 // Operations
 public:
 
 // Overrides
-	protected:
-	virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
+protected:
+virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
 // Implementation
 public:

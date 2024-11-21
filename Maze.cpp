@@ -1,10 +1,10 @@
 ﻿#include "pch.h"
-#include "Maze.h"
 #include "Color.h"
+#include "Maze.h"
 
 
 
-Maze::Maze() : rows(20), cols(20)
+Maze::Maze() : rows(20), cols(20), cellSize(30)
 {
     int tempMaze[20][20] = {
         {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
@@ -33,7 +33,7 @@ Maze::Maze() : rows(20), cols(20)
             maze[i][j] = tempMaze[i][j];    //nạp giá trị vào maze
 }
 
-void Maze::draw(CPaintDC* dc)
+void Maze::draw(CPaintDC* dc) const
 {
     Color colorDrawer(dc);  
     for (int i = 0; i < 20; ++i)
@@ -60,25 +60,6 @@ void Maze::draw(CPaintDC* dc)
 }
 
 
-int Maze::GetCell(int y, int x)
-{
-    if (y >= 0 && y < rows && x >= 0 && x < cols)
-    {
-        return maze[y][x];
-    }
-    return -1;
-}
-
-int Maze::GetRows()
-{
-    return rows;
-}
-int Maze::GetCols()
-{
-    return cols;
-}
-
-
-void Maze::draw(CClientDC* dc)
-{
-}
+//void Maze::draw(CClientDC* dc)
+//{
+//}
