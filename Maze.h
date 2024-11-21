@@ -7,12 +7,9 @@ public:
     int rows ;        
     int cols ; 
 	int cellSize;
-	int maze[20][20];
+	int maze[13][15];
 
-
-    
-
-    void draw(CPaintDC* dc) const;
+	void draw(CDC* dc) const;
 	/*void draw(CClientDC* dc);*/
 };
 

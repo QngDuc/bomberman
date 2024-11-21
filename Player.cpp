@@ -2,8 +2,9 @@
 #include "Player.h"
 #include "Maze.h"
 
-Player::Player()
+Player::Player():x(30),y(30),bomb(3)
 {
+
 }
 
 void Player::draw(CPaintDC* dc)

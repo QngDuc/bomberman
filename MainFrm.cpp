@@ -6,6 +6,7 @@
 #include "framework.h"
 #include "datbom.h"
 #include "MainFrm.h"
+#include "Maze.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -68,8 +69,8 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	// TODO: Modify the Window class or styles here by modifying
 	//  the CREATESTRUCT cs
 
-	cs.cx = 600;
-	cs.cy = 650;
+	cs.cx = 16 * 30;
+	cs.cy = 15 * 30;
 
 	cs.dwExStyle |= WS_EX_CLIENTEDGE;
 
