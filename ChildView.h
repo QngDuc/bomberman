@@ -19,7 +19,7 @@ public:
 public:
 	Maze maze;
 	Player player;
-	
+	int cellSize = 30;
 // Operations
 public:
 

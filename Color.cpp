@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "Color.h"
 
-Color::Color(CDC* dc) : dc(dc) , blackBrush(RGB(192, 192, 192)) , whiteBrush(RGB(255, 255, 255)) , redBrush(RGB(255, 0, 0)), playerBrush(RGB(40,40,40))
+Color::Color(CDC* dc) : dc(dc) , wallBrush(RGB(192, 192, 192)) , pathBrush(RGB(255, 255, 255)) , obstacleBrush(RGB(255, 0, 0)), playerBrush(RGB(40,40,40))
 {
    
 }
@@ -23,13 +23,13 @@ CBrush* Color::GetColor(int colorType)
     switch (colorType)
     {
     case 0: 
-        return &whiteBrush;
+        return &pathBrush;
     case 1: 
-        return &blackBrush;
+        return &wallBrush;
     case 2: 
-        return &redBrush;
+        return &obstacleBrush;
     default: 
-        return &whiteBrush;  
+        return &pathBrush;  
     }
 }
 

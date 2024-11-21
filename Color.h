@@ -12,9 +12,9 @@ public:
 
 private:
     CDC* dc;  // CDC dùng để vẽ
-    CBrush blackBrush;    // Màu đen
-    CBrush whiteBrush;    // Màu trắng
-    CBrush redBrush;      // Màu đỏ
+    CBrush wallBrush;    // Màu đen
+    CBrush pathBrush;    // Màu trắng
+    CBrush obstacleBrush;      // Màu đỏ
     CBrush playerBrush;
 
     // Helper method để thiết lập brush theo loại màu

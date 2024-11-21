@@ -26,6 +26,7 @@ Maze::Maze() : rows(13), cols(15), cellSize(30)
             maze[i][j] = tempMaze[i][j];    //nạp giá trị vào maze
 }
 
+
 void Maze::draw(CDC* dc) const
 {
     Color colorDrawer(dc);  
@@ -50,6 +51,26 @@ void Maze::draw(CDC* dc) const
             }
         }
     }
+}
+
+
+int Maze::GetCell(int row, int col) const
+{
+    if (row >= 0 && row < rows && col >= 0 && col < cols)
+    {
+        return maze[row][col];
+    }
+    return -1;
+}
+
+
+int Maze::GetRows() const {
+    return rows; 
+}
+
+
+int Maze::GetCols() const {
+    return cols; 
 }
 
 
