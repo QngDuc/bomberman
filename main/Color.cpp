@@ -1,9 +1,13 @@
 #include "pch.h"
 #include "Color.h"
 
-Color::Color(CDC* dc) : dc(dc) , wallBrush(RGB(192, 192, 192)) , pathBrush(RGB(255, 255, 255)) , obstacleBrush(RGB(255, 0, 0)), playerBrush(RGB(40,40,40))
-{
-   
+Color::Color(CDC* dc) 
+    : dc(dc) ,
+    wallBrush(RGB(100, 100, 100)),
+    pathBrush(RGB(255, 255, 255)), 
+    obstacleBrush(RGB(255, 0, 0)), 
+    playerBrush(RGB(40,40,40))
+{ 
 }
 
 void Color::DrawCell(const CRect& rect, int colorType)
