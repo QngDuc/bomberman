@@ -6,6 +6,7 @@
 #pragma once
 #include "Maze.h"
 #include "Player.h"
+#include "Image.h"
 
 
 // CChildView window
@@ -27,16 +28,18 @@ public:
 protected:
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 
-// Implementation
 public:
+	CChildView();
 	virtual ~CChildView();
 
-	// Generated message map functions
 protected:
 	afx_msg void OnPaint();
-	DECLARE_MESSAGE_MAP()
-public:
 	afx_msg void OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags);
 	afx_msg void OnTimer(UINT_PTR nIDEvent);
-};
+	DECLARE_MESSAGE_MAP()
 
+private:
+	CDC* dc;
+	Image* image;
+	int cellSize;
+};
